@@ -279,7 +279,7 @@ export function defineOAuthOidcEventHandler<TUser = OidcUser>({ config, onSucces
           scope: config.scope.join(' '),
           state,
           response_type: 'code',
-          code_challenge: verifier?.code_challenge,
+          // code_challenge: verifier?.code_challenge,
           // code_challenge_method: verifier?.code_challenge_method,
           ...config.parameters?.authorization_endpoint,
         }),
