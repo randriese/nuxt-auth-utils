@@ -1,10 +1,10 @@
-import type { OAuthConfig } from '#auth-utils'
-import { useRuntimeConfig } from '#imports'
 import { defu } from 'defu'
 import type { H3Event } from 'h3'
 import { createError, eventHandler, getQuery, sendRedirect } from 'h3'
 import { withQuery } from 'ufo'
 import { getOAuthRedirectURL, handleAccessTokenErrorResponse, handleInvalidState, handleMissingConfiguration, handlePkceVerifier, handleState, requestAccessToken } from '../utils'
+import type { OAuthConfig } from '#auth-utils'
+import { useRuntimeConfig } from '#imports'
 
 export interface OAuthOidcConfig {
   /**
@@ -280,7 +280,7 @@ export function defineOAuthOidcEventHandler<TUser = OidcUser>({ config, onSucces
           state,
           response_type: 'code',
           code_challenge: verifier?.code_challenge,
-          code_challenge_method: verifier?.code_challenge_method,
+          // code_challenge_method: verifier?.code_challenge_method,
           ...config.parameters?.authorization_endpoint,
         }),
       )
