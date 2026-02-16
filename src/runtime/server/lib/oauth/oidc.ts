@@ -240,10 +240,10 @@ interface OIDCConfiguration {
  */
 export function defineOAuthOidcEventHandler<TUser = OidcUser>({ config, onSuccess, onError }: OAuthConfig<OAuthOidcConfig, { user: TUser, tokens: OidcTokens }>) {
   return eventHandler(async (event: H3Event) => {
-    config = defu(config, useRuntimeConfig(event).oauth?.oidc, {
-      scope: ['openid'],
-    } satisfies OAuthOidcConfig)
-
+    // config = defu(config, useRuntimeConfig(event).oauth?.oidc, {
+    //   scope: ['openid'],
+    // } satisfies OAuthOidcConfig)
+    config = useRuntimeConfig(event).oauth?.oidc;
     const query = getQuery<{ code?: string, error?: string, state?: string }>(event)
 
     if (query.error) {
