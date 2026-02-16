@@ -1,4 +1,3 @@
-import { defu } from 'defu'
 import type { H3Event } from 'h3'
 import { createError, eventHandler, getQuery, sendRedirect } from 'h3'
 import { withQuery } from 'ufo'
@@ -243,7 +242,7 @@ export function defineOAuthOidcEventHandler<TUser = OidcUser>({ config, onSucces
     // config = defu(config, useRuntimeConfig(event).oauth?.oidc, {
     //   scope: ['openid'],
     // } satisfies OAuthOidcConfig)
-    config = useRuntimeConfig(event).oauth?.oidc;
+    config = useRuntimeConfig(event).oauth?.oidc
     const query = getQuery<{ code?: string, error?: string, state?: string }>(event)
 
     if (query.error) {
