@@ -1,6 +1,5 @@
 import type { OAuthConfig } from '#auth-utils'
 import { useRuntimeConfig } from '#imports'
-import { defu } from 'defu'
 import type { H3Event } from 'h3'
 import { createError, eventHandler, getQuery, sendRedirect } from 'h3'
 import type { QueryObject } from 'ufo'
