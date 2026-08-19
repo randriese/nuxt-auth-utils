@@ -61,6 +61,10 @@ export interface OAuthUvaWorkspaceConfig {
  */
 interface OidcUser {
   /**
+   * catch-all om specifieke SURF waarden mee te krijgen
+   */
+  [key: string]: string
+  /**
    * Subject - Identifier for the End-User at the Issuer.
    */
   sub: string

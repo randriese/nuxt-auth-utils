@@ -553,7 +553,7 @@ export default defineNuxtModule<ModuleOptions>({
         openidConfig: '',
         redirectURL: '',
         scope: [],
-      }
+      },
     })
   },
 })
