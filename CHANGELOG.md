@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v0.8.2
+
+[compare changes](https://github.com/randriese/nuxt-auth-utils/compare/v0.7.1...v0.8.2)
+
 ## v0.7.1
 
 [compare changes](https://github.com/randriese/nuxt-auth-utils/compare/v0.7.0...v0.7.1)

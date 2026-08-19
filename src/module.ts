@@ -545,5 +545,15 @@ export default defineNuxtModule<ModuleOptions>({
       redirectURL: '',
       scope: [],
     })
+    // UvA-OIDC OAuth
+    runtimeConfig.oauth.uva = defu(runtimeConfig.oauth.uva, {
+      default: {
+        clientId: '',
+        clientSecret: '',
+        openidConfig: '',
+        redirectURL: '',
+        scope: [],
+      }
+    })
   },
 })
