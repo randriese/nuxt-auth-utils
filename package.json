@@ -1,6 +1,6 @@
 {
   "name": "uva-nuxt-auth-utils",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Add Authentication to Nuxt applications with secured & sealed cookies sessions.",
   "repository": {
     "type": "git",
